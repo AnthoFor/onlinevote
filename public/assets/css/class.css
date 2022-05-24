@@ -1,0 +1,20 @@
+.purpleTxt {
+    color: #4265D3;
+}
+.mainBloc {
+    padding: 2%;
+    text-align: center;
+}
+.boldTxt {
+    font-weight: bold;
+}
+.avtgClass {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avtgClass img {
+    max-width: 45%;
+    margin: 2vh auto 2vh auto;
+}

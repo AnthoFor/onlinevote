@@ -1,0 +1,45 @@
+header {
+    width: 100%;
+    padding: 1%;
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+#headerMobile {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#mobilLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 0px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+#mobilLinks > a {
+    padding: 20px !important;
+}
+#headerMobile a {
+    color: black;
+    padding : 1%;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+}
+#hambIcon {
+    width: 20%;
+}
+#hambIcon img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#menuMobile {
+    padding: 10px 10px 0 0; /*Décolage de l'hamburger du haut/droite*/
+}

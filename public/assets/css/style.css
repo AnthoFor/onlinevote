@@ -1,0 +1,40 @@
+* {margin:0px; padding: 0px;box-sizing: border-box;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    margin-bottom: 4vh;
+}
+#title {
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+}
+
+main hr {
+    margin: 3% auto 3% auto;
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+
+.mainBloc h2 {
+    font-size: 1.3em;
+}
+.mainBloc p {
+    font-size: 0.9em;
+}
+#bloc3Img {
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

@@ -20,6 +20,7 @@ header {
     height: 0px;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
+    overflow: hidden;
 }
 #mobilLinks > a {
     padding: 20px !important;

@@ -10,11 +10,17 @@
 }
 .avtgClass {
     width: 50%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .avtgClass img {
     max-width: 45%;
+    height: 50px;  
     margin: 2vh auto 2vh auto;
+}
+.lastP {
+    margin-bottom: 0px !important;
 }

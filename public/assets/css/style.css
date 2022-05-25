@@ -1,5 +1,5 @@
 * {margin:0px; padding: 0px;box-sizing: border-box;font-family: Verdana, Geneva, Tahoma, sans-serif;}
-
+/* MOBILE FIRST */
 body {
     width: 100vw;
     overflow-x: hidden;
@@ -15,26 +15,40 @@ main {
     padding: 3%;
     text-align: center;
 }
-
 main hr {
     margin: 3% auto 3% auto;
     width: 50%;
     height: 3px;
     background-color: black;
     border: none;
+    margin-bottom: 3vh;
 }
-
 .mainBloc h2 {
     font-size: 1.3em;
 }
 .mainBloc p {
     font-size: 0.9em;
+    margin-bottom: 3vh;
+}
+#bloc2 img {
+    max-width: 100%;
 }
 #bloc3Img {
     margin-top: 4vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+#bloc4 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #4265D3;
 }
 
 

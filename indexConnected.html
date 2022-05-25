@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/assets/css/header.css">
     <link rel="stylesheet" href="public/assets/css/class.css">
     <link rel="stylesheet" href="public/assets/css/modal.css">
+    <link rel="stylesheet" href="public/assets/css/deskStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlineVote référendum en ligne</title>
 </head>
@@ -18,18 +19,27 @@
     <header>
         <!-- Menu disponible sur mobile -->
         <div id="headerMobile">
-            <a href="indexConnected.html" rel="noopener noreferrer" title="Page d'Accueil">
+            <a href="index.html" rel="noopener noreferrer" title="Page d'Accueil">
                 <img src="public/assets/img/logoMobil/logoBnPLong.svg" alt="logo OnlineVote">
             </a>
             <div id="mobilLinks">
-                <a href="boardIndex.html" id="btnBoardAccount">Mon compte</a>
-                <a href="index.html" id="btnDisconnectUser">Se déconnecter</a>
+                <a href="boardIndex.html" class="registerGo">Mon compte</a>
+                <a href="index.html" class="deconnectGo">Se déconnecter</a>
             </div>
-            <a href="#" id="hambIcon">
+            <span id="hambIcon">
                 <img src="public/assets/img/burger.svg" alt="logo menu hamburger" id="menuMobile">
-            </a>
+            </span>
         </div>
         <!-- Menu version desktop -->
+        <div id="headerDesktop">
+            <a href="index.html" rel="noopener noreferrer" title="Page d'Accueil">
+                <img src="public/assets/img/logoDesktop/logoBnP.svg" alt="logo OnlineVote">
+            </a>
+            <div id="desktopLinks">
+                <a href="boardIndex.html" class="boardGo">Mon compte</a>
+                <a href="index.html" class="deconnectGo">Se déconnecter</a>
+            </div>
+        </div>
     </header>
     <main>
         <!-- modal event -->
@@ -37,7 +47,6 @@
             <div id="modalContent">
                 <span id="closeModal">&times;</span>
                 <div id="insideModal">
-        
                 </div>
             </div>
         </div>
@@ -47,27 +56,27 @@
         </div>
         <!-- disposition des différent bloc en colonne version mobile, en ligne version desktop -->
         <div class="mainBloc" id="bloc1">
-            <h2>Proposez votre <span class="purpleTxt">référendum</span>, votez, visualisez les résultats avec
+            <h2>Proposez votre <span class="purpleTxt">référendum,</span> votez, visualisez les résultats avec
                 OnlineVote !</h2>
             <hr>
-            <p><span class="boldTxt">Proposez</span>,
-            <p>Vous pensez qu’on doit changer quelques choses ?
+            <p><span class="boldTxt">Proposez,</span><br>
+            Vous pensez qu’on doit changer quelques choses ?
                 Exprimez le ici.
-                Voyez si votre idée recueille suffisamment d’intérêt.</p>
+                Voyez si votre idée recueille suffisamment d’intérêt.
             </p>
-            <p><span class="boldTxt">Votez</span>,
-            <p>Exprimez vous !
-                Que ce soit une de vos propositions ou celle des autres, n’hésitez pas.</p>
+            <p><span class="boldTxt">Votez,</span><br>
+            Exprimez vous !
+                Que ce soit une de vos propositions ou celle des autres, n’hésitez pas.
             </p>
-            <p><span class="boldTxt">Visualisez</span>,
-            <p>Le taux de participation,
-                les résultats seront publiés des la fin de la date butoir.</p>
+            <p class="lastP"><span class="boldTxt">Visualisez,</span><br>
+            Le taux de participation,
+                les résultats seront publiés des la fin de la date butoir.
             </p>
         </div>
         <div class="mainBloc" id="bloc2">
             <h2>Adapté à tous les<span class="purpleTxt"> supports</span></h2>
             <hr>
-            <img src="public/assets/img/Téléphone.svg" alt="">
+            <img src="public/assets/img/phone.svg" alt="mokeUp mobile">
         </div>
         <div class="mainBloc" id="bloc3">
             <h2>Les avantages d'utiliser <span class="purpleTxt">OnlineVote</span></h2>
@@ -109,14 +118,15 @@
             <p>
                 <span class="boldTxt">Afficher</span> la liste des référendums en cours
             </p>
-            <p>
-                <span class="boldTxt">Votez</span>.
+            <p class="lastP">
+                <span class="boldTxt lastP">Votez</span>.
             </p>
         </div>
         <div class="mainBloc" id="bloc5">
             <h2>La<span class="purpleTxt"> confiance</span> du vote éléctronique</h2>
             <hr>
             <p>Solution de vote à bulletin secret par internet, fiable, simple & sécurisé.</p>
+        </div>
     </main>
     <footer>
         <div id="footerTop">

@@ -2,25 +2,26 @@
 window.addEventListener('click', (e) => {
     //menu hamburger mobile affiche le menu, si il est déjà afficher efface le.
     if (e.target.id == 'menuMobile') {
-        e.preventDefault();
         if (mobilLinks.style.height == '20vh') {
             mobilLinks.style.height = '0px';
             menuMobile.setAttribute('src', 'public/assets/img/burger.svg');
             //remet le burger en retrecissant
-
         } else {
             mobilLinks.style.height = '20vh';
             //met la croix en aggrandissant
             menuMobile.setAttribute('src', 'public/assets/img/burgerClose.svg');
         }
     }
-    if (e.target.id == 'registerGo') {
+    if (e.target.classList.contains('registerGo')) {
+        e.preventDefault();
         funcModalRegister();
     }
-    if (e.target.id == 'connectGo') {
+    if (e.target.classList.contains('connectGo')) {
+        e.preventDefault();
         funcModalConnect();
     }
     if (e.target.id == 'closeModal') {
+        e.preventDefault();
         funcModalClose();
     }
 })

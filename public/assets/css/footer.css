@@ -1,16 +1,19 @@
 footer {
     background-color: #0F1C36;
-    height: 17vh;
+    /* height: 23vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2%;
 }
 footer span {
     color: white;
 }
 #footerBottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    /* justify-content: space-between; */
     gap: 2vw;
 }
 #adresseOnlineVote, #legalyMentionned {

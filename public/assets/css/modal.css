@@ -48,19 +48,22 @@ form {
     border-radius: 10px;
 }
 label {
-    width: 80%;
+    width: 85%;
     text-align: left;
     color: white;
     white-space: nowrap;
     margin-bottom: 1vh;
 }
-button {
+input, button {
     width: 85%;
-    margin-top: 3vh;
     margin-bottom: 2vh;
     border: none;
     border-radius: 10px;
     height: 25px;
+    padding-left: 12px;
+}
+button {
+    margin-top: 3vh;
 }
 button[type=submit] {
     padding-left: unset;

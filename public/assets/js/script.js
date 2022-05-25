@@ -2,6 +2,7 @@
 window.addEventListener('click', (e) => {
     //menu hamburger mobile affiche le menu, si il est déjà afficher efface le.
     if (e.target.id == 'menuMobile') {
+        e.preventDefault();
         if (mobilLinks.style.height == '27vh') {
             mobilLinks.style.height = '0px';
             menuMobile.setAttribute('src', 'public/assets/img/burger.svg');
@@ -13,15 +14,13 @@ window.addEventListener('click', (e) => {
         }
     }
     if (e.target.classList.contains('registerGo')) {
-        e.preventDefault();
+        
         funcModalRegister();
     }
     if (e.target.classList.contains('connectGo')) {
-        e.preventDefault();
         funcModalConnect();
     }
     if (e.target.id == 'closeModal') {
-        e.preventDefault();
         funcModalClose();
     }
 })

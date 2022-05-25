@@ -2,12 +2,12 @@
 window.addEventListener('click', (e) => {
     //menu hamburger mobile affiche le menu, si il est déjà afficher efface le.
     if (e.target.id == 'menuMobile') {
-        if (mobilLinks.style.height == '25vh') {
+        if (mobilLinks.style.height == '27vh') {
             mobilLinks.style.height = '0px';
             menuMobile.setAttribute('src', 'public/assets/img/burger.svg');
             //remet le burger en retrecissant
         } else {
-            mobilLinks.style.height = '25vh';
+            mobilLinks.style.height = '27vh';
             //met la croix en aggrandissant
             menuMobile.setAttribute('src', 'public/assets/img/burgerClose.svg');
         }

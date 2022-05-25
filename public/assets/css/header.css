@@ -30,7 +30,8 @@ header {
     padding: 20px !important;
 }
 #headerMobile a img {
-    width: 100%;
+    min-width: 100%;
+    height: 100%;
 }
 #headerMobile a {
     color: black;

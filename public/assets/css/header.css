@@ -30,7 +30,7 @@ header {
     padding: 20px !important;
 }
 #headerMobile a img {
-    width: 35%;
+    width: 100%;
 }
 #headerMobile a {
     color: black;
@@ -38,13 +38,14 @@ header {
     text-decoration: none;
     font-size: 1em;
     display: block;
+    width: 30vw;
 }
 #hambIcon img {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-    width: 12%;
+    width: 10%;
 }
 #menuMobile {
     padding: 10px 10px 0 0; /*Décolage de l'hamburger du haut/droite*/

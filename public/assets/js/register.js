@@ -1,7 +1,4 @@
-let userAdress = document.getElementById('userAdress');
-userAdress.addEventListener('focus', () => {
-    document.location.href ='#userAdress'               
-})
+// API du gouvernement pour chopper les adresses
 document.getElementById('userAdress').addEventListener('input', function () {
     let dataInput = document.getElementById('userAdress');
     let dataInputBis = dataInput.value;
@@ -32,7 +29,6 @@ document.getElementById('userAdress').addEventListener('input', function () {
             })
         });
 })
-
 // ============= Check des inputs du forms. =========================
 window.addEventListener('input', (e) => {
     if (e.target.id == 'userPwCheck') {
@@ -58,6 +54,10 @@ window.addEventListener('input', (e) => {
         }
     }
     
+})
+// Event listener sur user adress pour remonter la fenêtre afin de voir les blocs soumi par l'api
+userAdress.addEventListener('focus', () => {
+    document.location.href ='#userAdress'               
 })
 // ============ FONCTION =======================
 // Check des valeurs des formulaires (mdp & email par ex) return 1 si vrai, 0 si faux

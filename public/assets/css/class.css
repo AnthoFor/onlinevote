@@ -24,3 +24,15 @@
 .lastP {
     margin-bottom: 0px !important;
 }
+.links {
+    white-space: nowrap;
+}
+.boardTitle {
+    color: white;
+    background-color: #0F1C36;
+    width: 95%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2%;
+    margin: auto auto 1vh auto;
+}

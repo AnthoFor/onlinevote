@@ -16,7 +16,7 @@
     margin: 15% auto; /* 15% pour descendre 1 peu*/
     border: 1px solid #888;
     width: 80%;
-    padding: 0% 2% 10% 2%;
+    padding: 0% 2% 4% 2%;
     display: flex;
     flex-direction: column;
 }
@@ -28,43 +28,92 @@
     justify-self:right;
     cursor: pointer;
     align-self: flex-end;
+    padding-top: 2%;
 }
 #insideModal {
     color: black;
     text-align: center;
     padding: 10px;
 }
-
+.smallSpan {
+    width: 85%;
+    text-align: right;
+    color: white;
+    font-size: small;
+}
 /* modal version connexion */
 h3 {
     margin: auto auto 2vh auto;
 }
 form {
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #0F1C36;
     padding: 3%;
     border-radius: 10px;
+    width: 95%;
+    gap: 1vh;
+    margin-bottom: 1vh;
+}
+fieldset {
+    border: none;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+legend {
+    text-align: center;
 }
 label {
     width: 85%;
     text-align: left;
     color: white;
     white-space: nowrap;
-    margin-bottom: 1vh;
+    margin: auto auto 1vh auto;
 }
 input, button {
     width: 85%;
-    margin-bottom: 2vh;
+    margin: auto auto 2vh auto;
     border: none;
     border-radius: 10px;
-    height: 25px;
+    height: 40px;
     padding-left: 12px;
+}
+#connectPw {
+    margin-bottom: 0px;
 }
 button {
     margin-top: 3vh;
 }
 button[type=submit] {
     padding-left: unset;
+}
+#propAdress {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 3px; */
+    align-items: center;
+}
+.btnAdress {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 3vw;
+    text-decoration: none;
+    width: 85%;
+    margin: 2px auto 2px auto;
+}
+#userPwCheck, #userMailCheck {
+    outline: none;
+}
+.checkOk {
+    border: 2px solid green;
+}
+.checkNok {
+    border: 2px solid red;
 }

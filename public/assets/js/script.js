@@ -13,11 +13,8 @@ window.addEventListener('click', (e) => {
             menuMobile.setAttribute('src', 'public/assets/img/burgerClose.svg');
         }
     }
-    if (e.target.classList.contains('registerGo')) {
-        
-        funcModalRegister();
-    }
     if (e.target.classList.contains('connectGo')) {
+        e.preventDefault();
         funcModalConnect();
     }
     if (e.target.id == 'closeModal') {
@@ -40,8 +37,9 @@ funcModalConnect = () => {
                             <form action="indexConnected.html">
                                 <label for="connectId">Identifiant de connexion:</label>
                                 <input type="text" name="connectId" id="connectId" placeholder="Votre identifiant">
-                                <label for="userPw">Mot de passe:</label>
-                                <input type="password" name="userPw" id="userPw" placeholder="Mot de passe">
+                                <label for="connectPw">Mot de passe:</label>
+                                <input type="password" name="connectPw" id="connectPw" placeholder="Mot de passe">
+                                <span class="smallSpan">mot de passe oublié ?</span>
                                 <button type="submit">connexion</button>
                             </form>  
                             `;

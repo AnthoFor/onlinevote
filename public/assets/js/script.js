@@ -5,12 +5,12 @@ window.addEventListener('click', (e) => {
         e.preventDefault();
         if (mobilLinks.style.height == '27vh') {
             mobilLinks.style.height = '0px';
-            menuMobile.setAttribute('src', 'public/assets/img/burger.svg');
+            menuMobile.setAttribute('src', '../../public/assets/img/burger.svg');
             //remet le burger en retrecissant
         } else {
             mobilLinks.style.height = '27vh';
             //met la croix en aggrandissant
-            menuMobile.setAttribute('src', 'public/assets/img/burgerClose.svg');
+            menuMobile.setAttribute('src', '../../public/assets/img/burgerClose.svg');
         }
     }
     if (e.target.classList.contains('connectGo')) {
@@ -26,15 +26,16 @@ window.addEventListener('click', (e) => {
 //==================== FONCTION ====================
 
 //modal register
-funcModalRegister = () => {
-    insideModal.innerHTML = ``;
-    modal.style.display = 'block';
-}
+// funcModalRegister = () => {
+//     insideModal.innerHTML = ``;
+//     modal.style.display = 'block';
+// }
 //modal connect
 funcModalConnect = () => {
+    // A mettre en POST
     insideModal.innerHTML = `
                             <h3>Se connecter</h3>
-                            <form action="indexConnected.html">
+                            <form action="../../controllers/homeConnectedCtrl.php">
                                 <label for="connectId">Identifiant de connexion:</label>
                                 <input type="text" name="connectId" id="connectId" placeholder="Votre identifiant">
                                 <label for="connectPw">Mot de passe:</label>

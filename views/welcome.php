@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Site de vote en ligne">
-    <link rel="icon" href="public/assets/img/logoNoTxt.svg">
-    <link rel="stylesheet" href="public/assets/css/style.css">
-    <link rel="stylesheet" href="public/assets/css/footer.css">
-    <link rel="stylesheet" href="public/assets/css/header.css">
-    <link rel="stylesheet" href="public/assets/css/class.css">
-    <link rel="stylesheet" href="public/assets/css/modalNForm.css">
-    <link rel="stylesheet" href="public/assets/css/deskStyle.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnlineVote référendum en ligne</title>
-</head>
-
-<body>
-    <header>
-        <!-- Menu disponible sur mobile -->
-        <div id="headerMobile">
-            <a href="index.html" rel="noopener noreferrer" title="Page d'Accueil">
-                <img src="public/assets/img/logoMobil/logoBnPLong.svg" alt="logo OnlineVote">
-            </a>
-            <div id="mobilLinks">
-                <a href="boardIndex.html" class="links">Mon compte</a>
-                <a href="boardIndex.html" class="links">Mon Profil</a>
-                <a href="index.html" class="deconnectGo links">Déconnexion</a>
-            </div>
-            <span id="hambIcon">
-                <img src="public/assets/img/burger.svg" alt="logo menu hamburger" id="menuMobile">
-            </span>
-        </div>
-        <!-- Menu version desktop -->
-        <div id="headerDesktop">
-            <a href="index.html" rel="noopener noreferrer" title="Page d'Accueil">
-                <img src="public/assets/img/logoDesktop/logoBnP.svg" alt="logo OnlineVote">
-            </a>
-            <div id="desktopLinks">
-                <a href="boardIndex.html" class="links">Mon compte</a>
-                <a href="boardIndex.html" class="links">Mon Profil</a>
-                <a href="index.html" class="deconnectGo">Déconnexion</a>
-            </div>
-        </div>
-    </header>
-    <main>
+<main>
         <!-- modal event -->
         <div id="modal">
             <div id="modalContent">
@@ -62,7 +17,7 @@
                 OnlineVote !</h2>
             <hr>
             <p><span class="boldTxt">Proposez,</span><br>
-            Vous pensez qu’on doit changer quelques choses ?
+            Vous pensez qu’on doit changer quelque chose ?
                 Exprimez le ici.
                 Voyez si votre idée recueille suffisamment d’intérêt.
             </p>
@@ -78,26 +33,26 @@
         <div class="mainBloc" id="bloc2">
             <h2>Adapté à tous les<span class="purpleTxt"> supports</span></h2>
             <hr>
-            <img src="public/assets/img/phone.svg" alt="mokeUp mobile">
+            <img src="../../public/assets/img/phone.svg" alt="mokeUp mobile">
         </div>
         <div class="mainBloc" id="bloc3">
             <h2>Les avantages d'utiliser <span class="purpleTxt">OnlineVote</span></h2>
             <hr>
             <div id="bloc3Img">
                 <div class="avtgClass" id="bloc1on4">
-                    <img src="public/assets/img/logoAccessToAll.svg" alt="logo People">
+                    <img src="../../public/assets/img/logoAccessToAll.svg" alt="logo People">
                     <span>Accessible</span>
                 </div>
                 <div class="avtgClass" id="bloc2on4">
-                    <img src="public/assets/img/logoChrono.svg" alt="logo Chrono">
+                    <img src="../../public/assets/img/logoChrono.svg" alt="logo Chrono">
                     <span>Automatisé</span>
                 </div>
                 <div class="avtgClass" id="bloc3on4">
-                    <img src="public/assets/img/logoShield.svg" alt="logo shield">
+                    <img src="../../public/assets/img/logoShield.svg" alt="logo shield">
                     <span>Sécurité</span>
                 </div>
                 <div class="avtgClass" id="bloc4on4">
-                    <img src="public/assets/img/logoParticip.svg" alt="">
+                    <img src="../../public/assets/img/logoParticip.svg" alt="">
                     <span>Participation</span>
                 </div>
             </div>
@@ -130,22 +85,3 @@
             <p>Solution de vote à bulletin secret par internet, fiable, simple & sécurisé.</p>
         </div>
     </main>
-    <footer>
-        <div id="footerTop">
-            <img src="public/assets/img/logoMobil/logoWnPLong.svg" alt="">
-        </div>
-        <div id="footerBottom">
-            <div id="adresseOnlineVote">
-                <span>70 rue des jacobins,</span> <span> 80000 Amiens</span>
-            </div>
-            <div id="legalyMentionned">
-                <span>Nous contacter</span>
-                <span>Mentions légales</span>
-                <span>Données personnelles</span>
-            </div>
-        </div>
-    </footer>
-    <script src="public/assets/js/script.js"></script>
-</body>
-
-</html>

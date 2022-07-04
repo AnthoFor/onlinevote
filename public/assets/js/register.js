@@ -1,26 +1,43 @@
 // API du gouvernement pour chopper les adresses
-document.getElementById('userAdress').addEventListener('input', function () {
+const userAdress = document.getElementById('userAdress');
+if (userAdress) {
+    // Quand utilisateur clic dans le champ input de l'adresse :
+    userAdress.addEventListener('input', function () {
     let dataInput = document.getElementById('userAdress');
     let dataInputBis = dataInput.value;
     let q = `${dataInputBis}`;
+    // Récuperation de l'API du gouv
     let adressData = `https://api-adresse.data.gouv.fr/search/?q=${q}&type=housenumber&autocomplete=1`;
     fetch(adressData)
         .then(reponse => reponse.json())
         .then(json => {
             json.features.forEach(adress => {
+                //Création d'un bouton pour chaque adresse ( 5 max)
                 let btnAdd = document.createElement('button');
+                //ajout de l'adresse (properties.label) en innerText
                 btnAdd.innerText = adress.properties.label;
+                //ajout de la class btnAdress pour le style
                 btnAdd.classList.add('btnAdress');
+                //Selection de la div ou mettre le bouton (btnAdd)
                 let whereToPutAdress = document.getElementById('propAdress');
+                //Ajout de btnAdd dans la div "propAdress"
                 whereToPutAdress.append(btnAdd);
+                //Si y a plus de 5 childs
                 if (propAdress.childElementCount > 5) {
+                    //alors enleve le premier element ( qui est le plus ancien)
                     whereToPutAdress.firstElementChild.remove();
                 }
+                //Selection de TOUS les btn
                 let adressArray = document.querySelectorAll('.btnAdress');
+                //pour Chaque boutons
                 adressArray.forEach(adress => {
+                    //ecoute si l'utilisateur clic sur l'un d'eux
                     adress.addEventListener('click', event => {
                         event.preventDefault();
+                        //Si utilisateur clic sur un bouton, alors ajoute la valeur du bouton (event.target.innerHTML)
+                        //dans le champs input de l'adresse
                         dataInput.value = event.target.innerHTML;
+                        //Et vu qu'il en a plus besoin, supprime toute les btn
                         adressArray.forEach(adressB => {
                             adressB.remove();
                         })
@@ -28,7 +45,9 @@ document.getElementById('userAdress').addEventListener('input', function () {
                 });
             })
         });
-})
+    })
+}
+
 // ============= Check des inputs du forms. =========================
 window.addEventListener('input', (e) => {
     if (e.target.id == 'userPwCheck') {
@@ -56,12 +75,19 @@ window.addEventListener('input', (e) => {
     
 })
 // Event listener sur user adress pour remonter la fenêtre afin de voir les blocs soumi par l'api
-userAdress.addEventListener('focus', () => {
-    document.location.href ='#userAdress'               
-})
+if (userAdress) {
+    userAdress.addEventListener('focus', () => {
+        //remontage a l'input d'avant (sinon ca coupe)
+        document.location.href ='#userLastName';
+        //Reselection du input userAdress
+        userAdress.focus();
+    })
+}
 // ============ FONCTION =======================
 // Check des valeurs des formulaires (mdp & email par ex) return 1 si vrai, 0 si faux
 check2valuesForm = (val1, val2) => {
-    if (val1 !== val2) {return 0;
-    } else {return 1}
+    if (val1 !== val2) 
+    {return 0;}
+    else 
+    {return 1}
 }

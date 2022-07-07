@@ -4,9 +4,9 @@
             <a href="../../index.php" rel="noopener noreferrer" title="Page d'Accueil">
                 <img src="../../public/assets/img/logoMobil/logoBnPLong.svg" alt="logo OnlineVote">
             </a>
-            <div id="mobilLinks">
+            <div id="mobilLinks" class="closed">
                 <a href="boardCtrl.php" class="links">Mon compte</a>
-                <a href="boardCtrl.php" class="links">Mon Profil</a>
+                <!-- <a href="boardCtrl.php" class="links">Mon Profil</a> -->
                 <a href="../../index.php" class="deconnectGo links">Déconnexion</a>
             </div>
             <span id="hambIcon">
@@ -20,8 +20,8 @@
             </a>
             <div id="desktopLinks">
                 <a href="boardCtrl.php" class="links">Mon compte</a>
-                <a href="boardCtrl.php" class="links">Mon Profil</a>
+                <!-- <a href="boardCtrl.php" class="links">Mon Profil</a> -->
                 <a href="../../index.php" class="deconnectGo">Déconnexion</a>
             </div>
         </div>
-    </header>
+</header>

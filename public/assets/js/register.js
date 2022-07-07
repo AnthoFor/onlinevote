@@ -49,7 +49,28 @@ if (userAdress) {
 }
 
 // ============= Check des inputs du forms. =========================
+let regexMail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 window.addEventListener('input', (e) => {
+    if (e.target.id == 'userMail') {
+        let userMailInput = userMail.value;
+        let result = regexMail.test(userMailInput);
+        if (result == false) {
+            userMail.classList.add('checkNok');
+        } else {
+            userMail.classList.remove('checkNok');
+            userMail.classList.add('checkOk');    
+        }
+    }
+    if (e.target.id == 'pwToMail') {
+        let userMailInput = pwToMail.value;
+        let result = regexMail.test(userMailInput);
+        if (result == false) {
+            pwToMail.classList.add('checkNok');
+        } else {
+            pwToMail.classList.remove('checkNok');
+            pwToMail.classList.add('checkOk');    
+        }
+    } 
     if (e.target.id == 'userPwCheck') {
         let inputPw1 = userPw.value;
         let inputPw2 = userPwCheck.value;
@@ -72,13 +93,22 @@ window.addEventListener('input', (e) => {
         userMailCheck.classList.add('checkOk');    
         }
     }
-    
+    if (e.target.id == 'connectId') {
+        let connectIdInput = connectId.value;
+        let result = regexMail.test(connectIdInput);
+        if (result == false) {
+            connectId.classList.add('checkNok');
+        } else {
+            connectId.classList.remove('checkNok');
+            connectId.classList.add('checkOk');    
+        }
+    } 
 })
 // Event listener sur user adress pour remonter la fenêtre afin de voir les blocs soumi par l'api
 if (userAdress) {
     userAdress.addEventListener('focus', () => {
         //remontage a l'input d'avant (sinon ca coupe)
-        document.location.href ='#userLastName';
+        document.location.href ='#adressLocation';
         //Reselection du input userAdress
         userAdress.focus();
     })

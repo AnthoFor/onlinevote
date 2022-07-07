@@ -21,7 +21,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 0px;
+    /* height: 0; */
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
     overflow: hidden;

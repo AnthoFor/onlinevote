@@ -1,52 +1,34 @@
 //========== EVENT LISTENER ==========
+mobilHeight = mobilLinks.offsetHeight;
+mobilLinks.style.height = '0px';
 window.addEventListener('click', (e) => {
     //menu hamburger mobile affiche le menu, si il est déjà afficher efface le.
     if (e.target.id == 'menuMobile') {
         e.preventDefault();
-        if (mobilLinks.style.height == '27vh') {
+        if (!mobilLinks.classList.contains('closed')) {
+            mobilLinks.classList.toggle('closed');
+            // mobilLinks.style.display = 'none';
             mobilLinks.style.height = '0px';
-            menuMobile.setAttribute('src', '../../public/assets/img/burger.svg');
+            menuMobile.setAttribute('src', '/../../public/assets/img/burger.svg');
             //remet le burger en retrecissant
         } else {
-            mobilLinks.style.height = '27vh';
+            mobilLinks.classList.toggle('closed');
+            // mobilLinks.style.display = 'flex';
+            console.log(mobilLinks.offsetHeight);
+            mobilLinks.style.height = mobilHeight+'px';
             //met la croix en aggrandissant
-            menuMobile.setAttribute('src', '../../public/assets/img/burgerClose.svg');
+            menuMobile.setAttribute('src', '/../../public/assets/img/burgerClose.svg');
         }
     }
     if (e.target.classList.contains('connectGo')) {
         e.preventDefault();
-        funcModalConnect();
+        modal.style.display = 'block';
     }
     if (e.target.id == 'closeModal') {
-        funcModalClose();
+        modal.style.display = 'none';
+        modalConf.style.display = 'none';
     }
+    if (e.target.className.includes('closeMe')) {
+        modalConf.style.display = 'none';
+    }   
 })
-
-
-//==================== FONCTION ====================
-
-//modal register
-// funcModalRegister = () => {
-//     insideModal.innerHTML = ``;
-//     modal.style.display = 'block';
-// }
-//modal connect
-funcModalConnect = () => {
-    // A mettre en POST
-    insideModal.innerHTML = `
-                            <h3>Se connecter</h3>
-                            <form action="../../controllers/homeConnectedCtrl.php">
-                                <label for="connectId">Identifiant de connexion:</label>
-                                <input type="text" name="connectId" id="connectId" placeholder="Votre identifiant">
-                                <label for="connectPw">Mot de passe:</label>
-                                <input type="password" name="connectPw" id="connectPw" placeholder="Mot de passe">
-                                <span class="smallSpan">mot de passe oublié ?</span>
-                                <button type="submit">connexion</button>
-                            </form>  
-                            `;
-    modal.style.display = 'block';
-}
-//close ALL modal
-funcModalClose = () => {
-    modal.style.display = 'none';
-}

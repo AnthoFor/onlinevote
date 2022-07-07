@@ -1,12 +1,4 @@
 <main>
-        <!-- modal event -->
-        <div id="modal">
-            <div id="modalContent">
-                <span id="closeModal">&times;</span>
-                <div id="insideModal">
-                </div>
-            </div>
-        </div>
         <!-- main title -->
         <div id="title">
             <h1>Voter en <span class="purpleTxt">ligne</span> </h1>

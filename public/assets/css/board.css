@@ -1,0 +1,33 @@
+.mainBoard {
+    justify-content: flex-start;
+    min-height: unset;
+}
+.titleBoard {
+    margin: 1vh auto 2vh auto;
+    color: white;
+    background-color: #0F1C36;
+    width: 95%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2%;
+}
+.menuBoard {
+    margin: 0vh auto 1vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0F1C36;
+    padding: 2%;
+    border-radius: 10px;
+    width: 95%;
+    gap: 1vh;
+    margin-bottom: 1vh;
+    color: white;
+    font-size: 0.8em;
+}
+.textareaQ {
+    height: 50px;
+}
+.textareaD {
+    height: 100px;
+}

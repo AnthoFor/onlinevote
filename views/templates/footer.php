@@ -15,6 +15,9 @@
             </div>
         </div>
     </footer>
+    <?php 
+    include(__DIR__.'/modalAuth.php');
+    include(__DIR__.'/modalConf.php');?>
     <script src="../../public/assets/js/script.js"></script>
     <script src="../../public/assets/js/register.js"></script>
 </body>

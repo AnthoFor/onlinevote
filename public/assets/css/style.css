@@ -1,15 +1,18 @@
 * {margin:0px; padding: 0px;box-sizing: border-box;font-family: Verdana, Geneva, Tahoma, sans-serif;}
 /* MOBILE FIRST */
 body {
-    width: 100vw;
+    /* width: 100vw; */
+    min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 main {
     display: flex;
     flex-direction: column;
-    /* gap: 6vh; */
     margin-bottom: 4vh;
-    min-height: 61vh;
+    flex: auto;
+    align-content: flex-start;
 }
 #title {
     width: 100%;

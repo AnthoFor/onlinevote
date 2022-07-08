@@ -1,8 +1,8 @@
 <?php
 // Necessaire pour l'authentification
-require_once(__DIR__.'/globalCtrl.php');
+require(__DIR__.'/globalCtrl.php'); //Require_once ne marche pas car rechargement de la page !
 if (empty($modalAuthHasToBeDraw) || $modalAuthHasToBeDraw == 'none') {
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['connectId'])) {
         //mail
         $pwToMail = trim(filter_input(INPUT_POST, 'pwToMail', FILTER_SANITIZE_EMAIL));
         if (empty($pwToMail)) {
@@ -14,6 +14,13 @@ if (empty($modalAuthHasToBeDraw) || $modalAuthHasToBeDraw == 'none') {
             }
         }
         if (empty($forgotPwErrorMsg)) {
+            //Envoi d'un email à l'utilisateur qui a oublié son pw. le mail est dans $pwToMail
+
+
+
+
+
+            //puis affichage de la modal de confirmation
             $whatModalShouldShow = '<form action="homeCtrl.php">
                                     <span class="specialSpan">Un email de recupération vient d\'etre envoyé à <strong>'. $pwToMail. '</strong>. 
                                     <br>Merci de vérifier vos mails.</span> 
@@ -25,6 +32,7 @@ if (empty($modalAuthHasToBeDraw) || $modalAuthHasToBeDraw == 'none') {
         }
     }
 }
+
 include(__DIR__.'/../views/templates/header.php');
 include(__DIR__.'/../views/templates/nav.php');
 include(__DIR__.'/../views/forgotPw.php');

@@ -143,6 +143,7 @@ button[type=submit] {
 }
 .redTxt {
     color: red;
+    font-size: 0.8em;
 }
 input:focus {
     outline: none;

@@ -3,8 +3,8 @@ require_once(__DIR__.'../../config/data.php');
 // Necessaire pour l'authentification
 require_once(__DIR__.'/globalCtrl.php');
 $errorMsg = array();
-//Permet de ne pas check les inputs d'enregistrement si l'utilisateur tente de s'authentifier
-if (empty($modalAuthHasToBeDraw)) {
+//Permet de ne pas check les inputs d'enregistrement si l'utilisateur tente de s'authentifier et qu'il fait une erreur
+if (empty($modalErrorMsg)) {
     //si il ne souhaite pas s'authentifier, alors on procede au verif
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //mail
@@ -110,14 +110,12 @@ if (empty($modalAuthHasToBeDraw)) {
             }
         }
         //pw
-        
         if (empty($_POST['userPw'])) {
             $errorMsg['userPwError'] = 'merci de remplir votre mot de passe.';
         } else {
             $userPw = $_POST['userPw'];
         }
         //pw check
-        
         if (empty($_POST['userPwCheck'])) {
             $errorMsg['userPwCheckError'] = 'merci de remplir votre email de vérification.';
         } else {
